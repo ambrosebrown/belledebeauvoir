@@ -2,11 +2,11 @@
 
         @font-face {
             font-family: 'enfont';
-            src: url('DandelionJF.ttf') format('truetype');
+            src: url('GreatVibes-Regular.ttf') format('truetype');
         }
         @font-face {
             font-family: 'sbcfont';
-            src: url('Bevan.ttf') format('truetype');
+            src: url('GreatVibes-Regular.ttf') format('truetype');
         }
         * {
             margin: 0;
