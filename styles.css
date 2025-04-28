@@ -18,7 +18,7 @@
 html { height: 100%; }
 
         body {
-            background: url('mainimage.png') no-repeat center center/cover;
+            background: url('mainimage.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
