@@ -21,10 +21,9 @@ html { height: 100%; }
             background: url('mainimage.png') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
-            justify-content: stretch;
+            justify-content: space-between;
             padding: 20px;
             min-height: 100%; 
-   	    align-items: stretch;
         }
 
         .container {
@@ -35,7 +34,6 @@ html { height: 100%; }
             width: 100%;
             height: 100%;
             align-content: space-between;
-  	    align-items: stretch;
         }
         
 
