@@ -2,11 +2,11 @@
 
         @font-face {
             font-family: 'enfont';
-            src: url('Bidenatrial.ttf') format('truetype');
+            src: url('Allura-Regular.ttf') format('truetype');
         }
         @font-face {
             font-family: 'sbcfont';
-            src: url('Bidenatrial.ttf') format('truetype');
+            src: url('Allura-Regular.ttf') format('truetype');
         }
         * {
             margin: 0;
