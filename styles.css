@@ -2,11 +2,11 @@
 
         @font-face {
             font-family: 'enfont';
-            src: url('GreatVibes-Regular.ttf') format('truetype');
+            src: url('Bidenatrial.ttf') format('truetype');
         }
         @font-face {
             font-family: 'sbcfont';
-            src: url('GreatVibes-Regular.ttf') format('truetype');
+            src: url('Bidenatrial.ttf') format('truetype');
         }
         * {
             margin: 0;
