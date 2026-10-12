@@ -168,16 +168,16 @@ button {
   pointer-events: none;
 }
 
-.hero-caption {
-  position: absolute;
-  z-index: 2;
-  left: 8%;
-  right: 8%;
-  bottom: 11%;
+
+.hero-caption h1 {
+  font-family: "Tangerine", cursive;
+  font-size: clamp(60px, 8vw, 110px);
+  font-weight: 700;
+  line-height: 1.1;
   color: var(--white);
-  text-align: center;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
+
 
 .hero-caption span {
   display: block;
