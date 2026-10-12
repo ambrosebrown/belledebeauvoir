@@ -1,16 +1,23 @@
 
+/* ========================================
+   BELLE DE BEAUVOIR
+   Homepage stylesheet
+   ======================================== */
+
 :root {
-  --black: #080305;
-  --burgundy: #300009;
-  --red: #a6002b;
-  --cream: #f8f0eb;
-  --muted: #c9b8b7;
+  --black: #000000;
+  --burgundy: #200006;
+  --burgundy-red: #a00028;
+  --white: #f8f2ee;
+  --muted: #c9b9b8;
 }
 
+/* Reset */
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -20,11 +27,18 @@ html {
 
 body {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  background: var(--black);
-  color: var(--cream);
+  background: #080305;
+  color: #f8f0eb;
   font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
@@ -36,22 +50,30 @@ button {
   font: inherit;
 }
 
+/* ========================================
+   HEADER AND NAVIGATION
+   ======================================== */
+
 .site-header {
+  position: relative;
+  z-index: 5;
+  width: 100%;
   min-height: 98px;
-  padding: 16px 5%;
+  padding: 16px 24px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 18px;
+  justify-content: center;
+  gap: 16px;
   background: #000;
-  border-top: 2px solid var(--red);
-  z-index: 2;
+  border-top: 2px solid var(--burgundy-red);
 }
 
 .brand {
+  color: var(--white);
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(24px, 3vw, 38px);
+  font-size: 30px;
+  font-weight: 400;
   text-align: center;
   letter-spacing: 0.04em;
 }
@@ -59,52 +81,67 @@ button {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 12px 24px;
+  gap: 14px 24px;
+  width: 100%;
 }
 
 .main-nav a {
-  min-width: 130px;
-  padding: 8px 15px;
-  border: 2px solid var(--red);
-  background: #100005;
-  text-align: center;
-  font-size: 19px;
+  min-width: 135px;
+  padding: 8px 14px;
+  border: 3px solid var(--burgundy-red);
+  background: #100004;
+  color: var(--white);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px;
   font-style: italic;
-  transition: background 0.2s ease, color 0.2s ease;
+  font-weight: 400;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
-  background: var(--red);
-  color: white;
+  background: var(--burgundy-red);
+  color: #fff;
 }
+
+/* ========================================
+   CAROUSEL FRAME
+   ======================================== */
 
 .carousel {
   position: relative;
-  flex: 1;
+  flex: 1 0 auto;
+  width: 100%;
   min-height: 650px;
-  display: flex;
-  background: var(--burgundy);
   overflow: hidden;
+  background: var(--burgundy);
 }
 
 .slide {
+  position: relative;
   width: 100%;
   min-height: 650px;
+  background: var(--burgundy);
 }
 
 .slide[hidden] {
-  display: none;
+  display: none !important;
 }
 
-/* Slide one: full photographic hero */
+/* ========================================
+   SLIDE 1: HERO PHOTOGRAPH
+   ======================================== */
 
 .slide-hero {
-  position: relative;
-  display: grid;
-  place-items: center;
-  background: #17100d;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #100906;
 }
 
 .hero-image {
@@ -112,125 +149,172 @@ button {
   inset: 0;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
-  object-position: center 43%;
+  object-position: center 42%;
 }
 
 .slide-hero::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.76),
-    transparent 65%
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.18) 40%,
+    transparent 72%
   );
   pointer-events: none;
 }
 
 .hero-caption {
   position: absolute;
-  z-index: 1;
-  bottom: 9%;
-  left: 5%;
-  right: 5%;
+  z-index: 2;
+  left: 8%;
+  right: 8%;
+  bottom: 11%;
+  color: var(--white);
   text-align: center;
-  text-shadow: 0 2px 12px #000;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
 
-.hero-caption span,
-.eyebrow {
+.hero-caption span {
   display: block;
-  margin-bottom: 14px;
-  color: #e6b7bd;
-  font-size: 16px;
-  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+  color: #f2d5d8;
+  font-size: 17px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .hero-caption h1 {
   font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5.5vw, 76px);
   font-weight: 400;
-  font-size: clamp(38px, 6vw, 78px);
+  line-height: 1.12;
 }
 
 .hero-caption p {
   margin-top: 12px;
-  font-size: clamp(19px, 2.5vw, 29px);
+  font-size: clamp(19px, 2.2vw, 29px);
+  line-height: 1.4;
 }
 
-/* Slide two: biography */
+/* ========================================
+   SLIDE 2: BIOGRAPHY
+   ======================================== */
 
 .slide-biography {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(300px, 1.4fr);
+  grid-template-columns:
+    minmax(280px, 0.85fr)
+    minmax(300px, 1.4fr);
   align-items: center;
   justify-content: center;
   gap: 32px;
-  padding: 5% 10%;
-  background: #200006;
+  padding: 4% 10%;
+  background: var(--burgundy);
 }
 
 .biography-copy {
-  padding: clamp(22px, 3vw, 38px);
+  padding: 24px 22px;
   background: #920023;
+  color: var(--white);
   text-align: center;
 }
 
+.biography-copy .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #f1c5cc;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .biography-copy h2 {
-  margin-bottom: 22px;
-  font-size: clamp(28px, 3vw, 42px);
+  margin-bottom: 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(27px, 2.8vw, 39px);
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .biography-copy p {
   margin-bottom: 14px;
-  font-size: clamp(17px, 1.65vw, 24px);
-  line-height: 1.55;
+  color: var(--white);
+  font-size: clamp(18px, 1.65vw, 24px);
+  line-height: 1.5;
+}
+
+.biography-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .biography-image-wrap {
+  width: 100%;
   height: min(66vh, 700px);
-  min-height: 350px;
+  min-height: 380px;
+  overflow: hidden;
 }
 
-.biography-image-wrap img,
-.reviews-image-wrap img {
-  display: block;
+.biography-image-wrap img {
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
   object-position: center;
 }
 
-/* Slide three: reviews */
+/* ========================================
+   SLIDE 3: PRESS REVIEWS
+   ======================================== */
 
 .slide-reviews {
   display: grid;
-  grid-template-columns: minmax(260px, 0.9fr) minmax(350px, 1.2fr);
+  grid-template-columns:
+    minmax(260px, 0.9fr)
+    minmax(350px, 1.2fr);
   align-items: center;
   justify-content: center;
   gap: clamp(30px, 5vw, 80px);
   padding: 4% 12%;
-  background: #200006;
+  background: var(--burgundy);
 }
 
 .reviews-image-wrap {
+  width: 100%;
   height: min(74vh, 720px);
-  min-height: 380px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.reviews-image-wrap img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .reviews-copy {
+  color: var(--white);
   text-align: center;
 }
 
 .reviews-copy .eyebrow {
-  margin-bottom: 24px;
+  margin-bottom: 26px;
+  color: #e9c2c9;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .reviews-copy blockquote {
-  margin-bottom: 25px;
-  font-size: clamp(19px, 2vw, 27px);
+  margin: 0 0 24px;
+  font-size: clamp(19px, 1.9vw, 27px);
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -241,89 +325,156 @@ button {
   font-style: normal;
 }
 
-/* Carousel controls */
+.reviews-copy blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   CAROUSEL ARROWS
+   ======================================== */
 
 .carousel-arrow {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 64px;
   border: 0;
+  border-radius: 0;
   background: transparent;
-  color: var(--cream);
-  cursor: pointer;
+  color: var(--white);
   font-family: Arial, sans-serif;
   font-size: 36px;
-  opacity: 0.8;
+  font-weight: 300;
+  cursor: pointer;
+  opacity: 0.85;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 .carousel-arrow:hover,
 .carousel-arrow:focus-visible {
+  color: #f0a5b8;
   opacity: 1;
-  color: #f1a0b4;
 }
 
 .carousel-arrow.previous {
-  left: 2%;
+  left: 3%;
 }
 
 .carousel-arrow.next {
-  right: 2%;
+  right: 3%;
 }
+
+/* ========================================
+   SLIDE INDICATORS
+   ======================================== */
 
 .carousel-dots {
   position: absolute;
-  z-index: 3;
-  bottom: 15px;
+  z-index: 4;
   left: 50%;
+  bottom: 18px;
   transform: translateX(-50%);
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
 }
 
 .dot {
   width: 10px;
   height: 10px;
-  border: 1px solid var(--cream);
+  padding: 0;
+  border: 1px solid var(--white);
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
 }
 
 .dot.is-active {
-  background: var(--cream);
+  background: var(--white);
 }
+
+/* ========================================
+   FOOTER
+   ======================================== */
 
 .site-footer {
-  padding: 15px 5%;
+  width: 100%;
+  padding: 14px 5%;
   background: #000;
   color: var(--muted);
-  text-align: right;
   font-size: 15px;
+  text-align: right;
 }
 
-/* Tablet and mobile */
+/* ========================================
+   TABLET
+   ======================================== */
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
+  .main-nav {
+    gap: 10px;
+  }
+
+  .main-nav a {
+    min-width: 120px;
+  }
+
+  .slide-biography,
+  .slide-reviews {
+    gap: 24px;
+    padding-right: 8%;
+    padding-left: 8%;
+  }
+
+  .biography-copy p {
+    font-size: 19px;
+  }
+
+  .reviews-copy blockquote {
+    font-size: 20px;
+  }
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 650px) {
   .site-header {
+    min-height: auto;
     padding: 18px 12px;
+    gap: 15px;
+  }
+
+  .brand {
+    font-size: 27px;
   }
 
   .main-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
-    width: 100%;
   }
 
   .main-nav a {
     min-width: 0;
-    flex: 1 1 40%;
-    padding: 9px 5px;
+    padding: 9px 4px;
+    border-width: 2px;
     font-size: 17px;
   }
 
-  .carousel,
+  .carousel {
+    min-height: 600px;
+  }
+
   .slide {
     min-height: 600px;
   }
@@ -336,25 +487,67 @@ button {
     object-position: center;
   }
 
-  .slide-biography,
-  .slide-reviews {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 35px 15%;
+  .hero-caption {
+    bottom: 12%;
+    left: 8%;
+    right: 8%;
   }
 
-  .biography-image-wrap,
-  .reviews-image-wrap {
-    height: 420px;
+  .hero-caption span {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-caption h1 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+  .hero-caption p {
+    font-size: 19px;
+  }
+
+  .slide-biography,
+  .slide-reviews {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 22px;
+    padding: 28px 12% 60px;
+  }
+
+  .biography-copy {
+    padding: 22px 18px;
+  }
+
+  .biography-copy h2 {
+    font-size: 30px;
+  }
+
+  .biography-copy p {
+    font-size: 18px;
+  }
+
+  .biography-image-wrap {
+    height: 360px;
     min-height: 0;
   }
 
-  .slide-reviews {
-    padding-bottom: 55px;
+  .reviews-image-wrap {
+    height: 350px;
+    min-height: 0;
+  }
+
+  .reviews-copy .eyebrow {
+    font-size: 12px;
   }
 
   .reviews-copy blockquote {
-    font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+
+  .carousel-arrow {
+    width: 34px;
+    font-size: 29px;
   }
 
   .carousel-arrow.previous {
@@ -366,32 +559,14 @@ button {
   }
 }
 
-@media (max-width: 480px) {
-  .brand {
-    font-size: 27px;
-  }
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
 
-  .slide-biography,
-  .slide-reviews {
-    padding: 25px 12%;
-  }
-
-  .biography-copy {
-    padding: 20px 16px;
-  }
-
-  .biography-image-wrap,
-  .reviews-image-wrap {
-    height: 300px;
-  }
-
-  .hero-caption {
-    bottom: 12%;
-  }
-
-  .hero-caption h1 {
-    font-size: 38px;
-  }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #f1b4c2;
+  outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
