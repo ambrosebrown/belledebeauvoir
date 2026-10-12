@@ -1,57 +1,185 @@
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content=
-"width=device-width, initial-scale=1.0"/>
-		<meta name="description" content="Belle de Beauvoir Burlesque"/>
-		<!-- Meta Keywords (optional, less relevant nowadays) -->
-		<meta name="keywords" content=
-"Cabaret,Belle de Beauvoir,burlesque,londontheatre,londonlife,londoncabaret,clown,host,singer,vaudeville,londonvariety,variety,comedy,cabaretlondon,queer,bluesandburlesque,bigbandburlesque,showgirl"/>
-		<!-- Author of the page -->
-		<meta name="author" content="Belle et la Bete" />
-		<!-- Robots Meta Tag (telling search engines how to index the page) -->
-		<meta name="robots" content="index, follow"/>
-		<!-- "noindex" to prevent indexing -->
-		<!-- Open Graph Meta Tags for Social Media Sharing (Facebook, Twitter, etc.) -->
-		<meta property="og:description" content="Belle de Beauvoir Burlesque - Showgirl"/>
-		<meta property="og:title" content="Belle de Beauvoir Burlesque - Showgirl"/>
-		<meta property="og:image" content="https://belledebeauvoir.com/mainimage.png"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="https://belledebeauvoir.com"/>
-		<title>Belle de Beauvoir</title>
-		<link rel="stylesheet" href="styles.css">
-      <link rel="icon" href="favicon.png" type="image/x-icon">
-	</head>
-	<body>
-		<div class="container">
-			<div class="text-overlay-title top-left">
-				<a href="index.html">Belle<br/>de Beauvoir</a>
-			</div>
-			<div class="box text-overlay-menu top-right">
-				<a href="about.html">About</a><br/>
-				<a href="showreel.html">Showreel</a><br/>
-				<a href="acts.html">Acts</a><br/>
-				<a href="gallery.html">Gallery</a><br/>
-				<a href="mailto:belledebeauvoirburlesque@gmail.com">Contact</a><br/>
-				<a href="https://instagram.com/belledebeauvoir" target="_blank">
-					<img class="instagram-icon" src="600px-Instagram_icon.png" alt="Instagram"/>
-				</a>
-			</div>
-			<div class="full-width content" ></div>
-			<div class="full-width content" ></div>
-			<div class="full-width content" ></div>
-			<div class="box full-width content">
-				<p  style="margin-bottom: 0;"><i>"The Sparkling Diamond of Burlesque" BBC Radio</i></p>
-			</div>
-		<div class="footer"> &copy; Copyright <span id="year"></span>  <a href="http://www.belledebeauvoir.com">Belle de Beauvoir</a> </div>
-		</div>
-		<script>
-        // Get the current year
-        const currentYear = new Date().getFullYear();
-        // Set the year in the span with id "year"
-        document.getElementById('year').textContent = currentYear;
-      </script>
-	</body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Belle de Beauvoir, international cabaret performer, singer, comedian and burlesque artist.">
+  <meta name="theme-color" content="#080305">
+  <title>Belle de Beauvoir | Cabaret & Burlesque</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">Belle de Beauvoir</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#" data-placeholder>Upcoming Shows</a>
+      <a href="#" data-placeholder>Repertoire</a>
+      <a href="#" data-placeholder>Bookings</a>
+      <a href="#" data-placeholder>Shop</a>
+    </nav>
+  </header>
+
+  <main class="carousel" aria-label="Homepage highlights">
+
+    <section class="slide slide-hero is-active"
+      aria-label="Belle de Beauvoir portrait">
+      <img class="hero-image"
+        src="hero-portrait.jpg"
+        alt="Belle de Beauvoir reclining on a green velvet sofa">
+
+      <div class="hero-caption">
+        <span>Cabaret · Burlesque · Live Performance</span>
+        <h1>Belle de Beauvoir</h1>
+        <p>Glamour, wit and unapologetic showmanship.</p>
+      </div>
+    </section>
+
+    <section class="slide slide-biography"
+      aria-label="About Belle de Beauvoir" hidden>
+      <div class="biography-copy">
+        <span class="eyebrow">Meet the performer</span>
+        <h2>Belle de Beauvoir</h2>
+        <p>
+          Belle de Beauvoir is an international cabaret and burlesque
+          performer, singer, comedian and host, bringing glamour, wit
+          and unapologetic showmanship to stages across the UK and
+          internationally.
+        </p>
+        <p>
+          A fixture of the contemporary burlesque and cabaret scene,
+          Belle has performed sold-out shows at the Edinburgh Festival
+          Fringe and across Australia and the UK, captivating audiences
+          with her unique blend of classic showgirl glamour, modern
+          striptease, comedy and live performance.
+        </p>
+        <p>Belle is a true triple-threat performer.</p>
+      </div>
+
+      <div class="biography-image-wrap">
+        <img src="biography-photo.jpg"
+          alt="Belle de Beauvoir in pink showgirl costume">
+      </div>
+    </section>
+
+    <section class="slide slide-reviews"
+      aria-label="Press reviews" hidden>
+      <div class="reviews-image-wrap">
+        <img src="reviews-photo.jpg"
+          alt="Belle de Beauvoir in a dramatic red feather costume">
+      </div>
+
+      <div class="reviews-copy">
+        <span class="eyebrow">Don't just take our word for it</span>
+
+        <blockquote>
+          “Come for the tease, stay for the serious musical chops
+          and undeniable stage presence...a rich showcase”
+          <cite>★★★★ The List, 2026</cite>
+        </blockquote>
+
+        <blockquote>
+          “This is the power of art...a glorious hour”
+          <cite>★★★★★ Clara Reviews, 2026</cite>
+        </blockquote>
+
+        <blockquote>
+          “Leaving you desperately wanting more”
+          <cite>★★★★★ The Student, 2024</cite>
+        </blockquote>
+
+        <blockquote>
+          “Smooth, polished and absolutely tantalising...Blues and
+          Burlesque is the perfect combination”
+          <cite>★★★★½ Edinburgh Reviews</cite>
+        </blockquote>
+
+        <blockquote>
+          “A fringe fixture”
+          <cite>★★★★★ HifiPig Magazine</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <button class="carousel-arrow previous"
+      type="button" aria-label="Previous slide">
+      <span aria-hidden="true">←</span>
+    </button>
+
+    <button class="carousel-arrow next"
+      type="button" aria-label="Next slide">
+      <span aria-hidden="true">→</span>
+    </button>
+
+    <div class="carousel-dots" aria-label="Choose a slide">
+      <button class="dot is-active" type="button"
+        aria-label="Show slide 1" aria-current="true"></button>
+      <button class="dot" type="button"
+        aria-label="Show slide 2"></button>
+      <button class="dot" type="button"
+        aria-label="Show slide 3"></button>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Belle de Beauvoir</span>
+  </footer>
+
+  <script>
+    const slides = [...document.querySelectorAll(".slide")];
+    const dots = [...document.querySelectorAll(".dot")];
+    const previous = document.querySelector(".previous");
+    const next = document.querySelector(".next");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, i) => {
+        slide.hidden = i !== currentSlide;
+        slide.classList.toggle("is-active", i === currentSlide);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === currentSlide);
+        if (i === currentSlide) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    previous.addEventListener("click", () => {
+      showSlide(currentSlide - 1);
+    });
+
+    next.addEventListener("click", () => {
+      showSlide(currentSlide + 1);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => showSlide(i));
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.querySelectorAll("[data-placeholder]").forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        alert("This page will be connected when it is ready.");
+      });
+    });
+  </script>
+
+</body>
+</html>
