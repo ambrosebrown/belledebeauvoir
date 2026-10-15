@@ -593,11 +593,16 @@ button {
   opacity: 1;
 }
 
+.social-links {
+  gap: 10px;
+}
+
 .social-links svg {
   display: block;
-  width: 19px;
-  height: 19px;
+  width: 14px;
+  height: 14px;
 }
+
 
 /* Contact page */
 .contact-page {
