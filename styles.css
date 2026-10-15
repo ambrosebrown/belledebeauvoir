@@ -574,43 +574,55 @@ button {
 
 
 /* Social icons in the main navigation */
+
+/* Minimal, editorial social icons */
 .social-links {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  gap: 12px;
 }
 
 .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: auto;
+  height: auto;
   padding: 0;
-  box-sizing: border-box;
-  border: 1px solid currentColor;
+  border: none;
   border-radius: 0;
+  background: none;
   color: inherit;
-  opacity: 0.8;
-  transition: opacity 0.25s ease;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
 .social-links a:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .social-links svg {
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
 }
+
+
+.main-nav a[href="contact.html"] {
+  border: 1px solid currentColor;
+  border-radius: 30px;
+  padding: 10px 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a[href="contact.html"]:hover {
+  background: white;
+  color: #080305;
+}
+
 
 
 /* Contact page */
