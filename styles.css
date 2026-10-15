@@ -580,10 +580,23 @@ button {
   gap: 14px;
 }
 
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid currentColor;
+  border-radius: 0;
   color: inherit;
   opacity: 0.8;
   transition: opacity 0.25s ease;
@@ -593,14 +606,10 @@ button {
   opacity: 1;
 }
 
-.social-links {
-  gap: 10px;
-}
-
 .social-links svg {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
 }
 
 
